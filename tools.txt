@@ -1,0 +1,214 @@
+export const tools = [ { name: “nan”, model: “nan”, price: “nan”,
+deposit: “nan” }, { name: “Наименование”, model: “Марка”, price:
+“Серийный номер”, deposit: “Цена” }, { name: “Лентошлифовальная машина”,
+model: “Зубр ЗЛШМ-76-950”, price: “325801345-0118”, deposit: “500” }, {
+name: “Паяльник полипропилена”, model: “black gear”, price:
+“27112104775”, deposit: “600” }, { name: ” УШМ 125”, model: “max pro
+680W”, price: “19-055/1/0456”, deposit: “350” }, { name: ” Дрель
+тихоходная с микроударом “, model:”AEG DB1500-2XE”, price: “1378”,
+deposit: “2500” }, { name: ” Рубанок “, model:”интерскол P-110/1100M”,
+price: “49.556996”, deposit: “600” }, { name: ” Фрезер “, model:”RYOBI
+RRT 1600”, price: “44442106004533”, deposit: “800” }, { name: ”
+Пневмопистолет тоя “, model:”toua GSN 50”, price: “nan”, deposit: “1000”
+}, { name: “Фен строительный интерскол”, model: “фэ-2000”, price:
+“54.121557”, deposit: “350” }, { name: ” Плазморез “, model:”птк RILON
+CUT 60 C”, price: “92004788”, deposit: “2000” }, { name: “Газовый
+гвоздезабивной пистолет по дереву”, model: “toua GFN3490CH-C”, price:
+“nan”, deposit: “1000” }, { name: ” Бетономешалка 63 л “, model:”Земляк
+БСЭ-63”, price: “nan”, deposit: “1000” }, { name: ” Клупп “,
+model:”sq30-2c”, price: “2102169”, deposit: “1500” }, { name: ” УШМ 230
+“, model:”metabo W2200-230”, price: “335000”, deposit: “800” }, { name:
+” Циклевочная машина”, model: “Мисон СО-206”, price: “3064319”, deposit:
+“1500” }, { name: ” Отбойный молоток “, model:”Favorit”, price:
+“062023/20230331-15”, deposit: “2000” }, { name: ” Безвоздушный
+краскопульт “, model:”SCHTAER Mars 20”, price: “nan”, deposit: “1500” },
+{ name: ” Электропушка “, model:”Stand YXC-03RE”, price: “nan”, deposit:
+“350” }, { name: ” Дизельная пушка”, model: “Ganta ТПД-55”, price:
+“nan”, deposit: “2000” }, { name: ” Штроборез “, model:”Bosch GNF 35
+CA”, price: “9000304”, deposit: “1500” }, { name: ” Пылесос “,
+model:”Bosch GAS 20 L SFC”, price: “606080417”, deposit: “1000” }, {
+name: ” Вышка тура “, model:”1,22,07,6”, price: “nan”, deposit: “1000”
+}, { name: ” Рехао “, model:”Пресс-инструмент Tim FT1240B-QC”, price:
+“nan”, deposit: “800” }, { name: ” Каток для газона “, model:”Каток
+газонный К01-00.000 50 л”, price: “nan”, deposit: “500” }, { name:
+“Жираф”, model: “Schtaer 3000F3”, price: “nan”, deposit: “1000” }, {
+name: ” Газонокосилка бенз самоходная срез 51 см “, model:”ECO MX196”,
+price: “L73524121257”, deposit: “2000” }, { name: ” Тепловизор “,
+model:”HTI HT-19”, price: “hdja000005199”, deposit: “2000” }, { name: ”
+перфоратор “, model:”Makitta 2470”, price: “300245”, deposit: “800” }, {
+name: ” Шуруповерт “, model:”Bosch GSB120-Li”, price: “322203903”,
+deposit: “600” }, { name: ” компрессор 100 л “, model:”Inforce CE100”,
+price: “9382006001”, deposit: “1500” }, { name: ” Сварочный аппарат
+полуавтомат “, model:”сварог Real MIG 200”, price: “nan”, deposit:
+“2000” }, { name: “Тепловая пушка”, model: “Timberk TIH Q2 12M”, price:
+“nan”, deposit: “600” }, { name: “Осушитель 92/1”, model: “Master DH92”,
+price: “986360002340”, deposit: “1100” }, { name: “Осушитель 92/2”,
+model: “Master DH92”, price: “98636002394”, deposit: “1100” }, { name:
+“Осушитель 92/3”, model: “Master DH92”, price: “nan”, deposit: “1100” },
+{ name: “Осушитель 92/4”, model: “Master DH92”, price: “98638002931”,
+deposit: “1100” }, { name: “Осушитель 92/5”, model: “Master DH92”,
+price: “98635003638”, deposit: “1100” }, { name: “Осушитель 92/6”,
+model: “Master DH92”, price: “98636002363”, deposit: “1100” }, { name:
+“Осушитель 92/7”, model: “Master DH92”, price: “nan”, deposit: “1100” },
+{ name: “Осушитель 92/8”, model: “Master DH92”, price: “98636002359”,
+deposit: “1100” }, { name: “Осушитель 92/9”, model: “Master DH92”,
+price: “98640002549”, deposit: “1100” }, { name: “Осушитель 62/1”,
+model: “Master DH62”, price: “31630439”, deposit: “900” }, { name:
+“Осушитель 62/2”, model: “Master DH62”, price: “9864039004684”, deposit:
+“900” }, { name: “Осушитель 77/1”, model: “Wilms KT 800”, price:
+“611090889604”, deposit: “900” }, { name: “Осушитель 77/2”, model:
+“Wilms KT 800”, price: “611090889614”, deposit: “900” }, { name:
+“Осушитель 70”, model: “dehu-70l”, price: “0086-571-82925382”, deposit:
+“900” }, { name: “Осушитель 732”, model: “master DH732”, price:
+“85641005682”, deposit: “800” }, { name: “Осушитель 752/1”, model:
+“master DH752”, price: “91638022168”, deposit: “850” }, { name:
+“Осушитель 752/2”, model: “master DH752”, price: “91641008882”, deposit:
+“850” }, { name: “Осушитель 752/3”, model: “master DH752”, price:
+“91644002535”, deposit: “850” }, { name: “Осушитель 752/4”, model:
+“master DH752”, price: “91640001058”, deposit: “850” }, { name:
+“Осушитель 752/5”, model: “master DH752”, price: “91644002536”, deposit:
+“850” }, { name: “Осушитель 90”, model: “Dantherm CDT 90”, price: “nan”,
+deposit: “1000” }, { name: “Осушитель 60”, model: “ASPRO-DRY60”, price:
+“21004142102”, deposit: “850” }, { name: “Осушитель 60”, model:
+“nd60-att”, price: “ht11080791”, deposit: “850” }, { name: “Осушитель
+60”, model: “zs60l”, price: “zs20220812142”, deposit: “850” }, { name:
+“Осушитель 50”, model: “Dehumidifier DB50”, price: “nan”, deposit: “800”
+}, { name: “Осушитель 500ден”, model: “Danvex DEN 500i”, price: “nan”,
+deposit: “800” }, { name: “Озонатор”, model: “Ozonika 20”, price: “nan”,
+deposit: “3000” }, { name: “перфоратор”, model: “Макита 5001с”, price:
+“177497”, deposit: “2000” }, { name: “генератор”, model: “CHAMPION
+GG7501E-3”, price: “3010221200938”, deposit: “1500” }, { name:
+“мотобур”, model: “CHAMPION AG252, 2 л.с”, price: “2202230324826”,
+deposit: “1000” }, { name: “мотопомпа2”, model: “FUBAG 950T”, price:
+“882408pg950t000152”, deposit: “1500” }, { name: “мотопомпа”, model:
+“FUBAG 950T”, price: “882408pg950t000150”, deposit: “1500” }, { name:
+“Сварочный аппарат”, model: ” Foxweld VARTEG 230 5264”, price:
+“5264059010070”, deposit: “500” }, { name: “Компрессор”, model: “Aurora
+CYCLON-75 TURBO”, price: “2102110001”, deposit: “1000” }, { name:
+“Желобонакатный станок /1”, model: “VOLL V-Groover 6 2.24006”, price:
+“62303116”, deposit: “3000” }, { name: “Желобонакатный станок /2”,
+model: “Hоngli YG12D”, price: “nan”, deposit: “3000” }, { name:
+“Измельчитель веток”, model: “GBK 150”, price: “nan”, deposit: “7000” },
+{ name: “Измeльчитeль пней”, model: “SGR1500е”, price: “nan”, deposit:
+“6000” }, { name: ” Торцовая пила с протяжкой “, model:”Торцовочная пила
+AEG PS 216 L 4935440650”, price: “9185000045-0523”, deposit: “2000” }, {
+name: “Пылесос пропышленый/1”, model: “Linolit 322E”, price: “nan”,
+deposit: “2000” }, { name: “Безвоздушный краскопульт”, model: “GTB-850”,
+price: “nan”, deposit: “2000” }, { name: “Плиткорез электрический”,
+model: “Wandeli ZX-1200”, price: “2312130268”, deposit: “2000” }, {
+name: “Виброрейка 2,5 м”, model: “VEKTOR VSJ-2.5”, price:
+“g20d54s0035m3a”, deposit: “2000” }, { name: “Плазморез”, model: “Аврора
+джет 40 компрессор”, price: “azj40k23040299”, deposit: “2500” }, { name:
+“Плазморез”, model: “Аврора джет 40 компрессор”, price:
+“azj40k24010235”, deposit: “2500” }, { name: “Вибратор для бетона”,
+model: “Oli EWO 38 RUS”, price: “nan”, deposit: “2000” }, { name:
+“Вентилятор2”, model: “MASTER DF 20 P 4604.008”, price: “88В22000244”,
+deposit: “800” }, { name: “Вентилятор1”, model: “MASTER DF 20 P
+4604.008”, price: “86В22000233”, deposit: “800” }, { name: “Газавая
+пушка”, model: “Gigant GH30FD”, price: “2305-449969-06911-50075”,
+deposit: “1000” }, { name: “Газавая пушка”, model: “Gigant GH30FD”,
+price: “2305-449969-06911-50071”, deposit: “1000” }, { name: “Газавая
+пушка”, model: “mcs blp17m”, price: “2037010062”, deposit: “1000” }, {
+name: “Швонарезчик”, model: “Слипстоун CS146”, price: “nan”, deposit:
+“2500” }, { name: “виброплита 300 кг”, model: “VS-309”, price: “nan”,
+deposit: “4000” }, { name: “Швонарезчик на 900 мм”, model: “CS3213
+Слипстоун”, price: “81124”, deposit: “4000” }, { name: “шлифмашина по
+бетону 1”, model: “слипстоун GM_122”, price: “2417 0821 0544”, deposit:
+“2500” }, { name: “шлифмашина по бетону 2”, model: “слипстоун GM_122”,
+price: “nan”, deposit: “2500” }, { name: “шлифмашина по бетону 3”,
+model: “слипстоун GM_122”, price: “nan”, deposit: “2500” }, { name:
+“перфоратор сдс+”, model: “BH-2100N”, price: “12866320”, deposit: “800”
+}, { name: “перфоратор сдс+”, model: “зубр П-26-800”, price:
+“1149702669-0124”, deposit: “800” }, { name: “штроборез”, model: “зубр
+зш-п30-1400”, price: “0011305781-0624”, deposit: “1000” }, { name:
+“штроборез”, model: “зубр 230 мм”, price: “1149404981-0124”, deposit:
+“2000” }, { name: “миксер”, model: “макита”, price: “nan”, deposit:
+“800” }, { name: “измеритель влажности”, model: “testo”, price: “nan”,
+deposit: “800” }, { name: “сабельная пила”, model: “хамер”, price:
+“120234020845”, deposit: “800” }, { name: “бензопила”, model: “патриот
+пт3816”, price: “220105510”, deposit: “1000” }, { name: “Пылесос”,
+model: “декстер”, price: “1200700013022401000809”, deposit: “1000” }, {
+name: “мойка высокого давления”, model: “керхер к7 компакт”, price:
+“351089”, deposit: “1300” }, { name: “Вибратор для бетона”, model:
+“дрельного типа”, price: “102023/20230731-31”, deposit: “800” }, { name:
+“виброплита 100 кг”, model: “зитрек”, price: “nan”, deposit: “1500” }, {
+name: “установка алмазного бурения”, model: “сатурн ов-255 ве-1”, price:
+“2203163”, deposit: “2000” }, { name: “тример”, model: “Daewoo DABC
+520”, price: “nan”, deposit: “1000” }, { name: “дизельная пушка”, model:
+“балу”, price: “nan”, deposit: “1500” }, { name: “лампа лосева”, model:
+“Lossew Lamp P2 Ultra pro”, price: “nan”, deposit: “1000” }, { name:
+“вибротрамбовка”, model: “Gigant Honda dvt75-H160”, price:
+“2303-515027-06911-500018”, deposit: “2000” }, { name: “Ушм 125”, model:
+“АЕГ Ws 6-125”, price: “nan”, deposit: “700” }, { name: “Ушм 125”,
+model: “АЕГ Ws 8-125”, price: “00045962 332024”, deposit: “700” }, {
+name: “Ушм 125”, model: “АЕГ Ws 13-125 xe”, price: “04111677 222024”,
+deposit: “700” }, { name: “Пылесос строительный”, model: “ПС 12-35а”,
+price: “hzhl0156-00875”, deposit: “1000” }, { name: “Пылесос
+пропышленый/3”, model: “Linolit 612е”, price: “s12 .004433”, deposit:
+“2000” }, { name: “Пылесос пропышленый/2”, model: “Linolit 612е”, price:
+“nan”, deposit: “2000” }, { name: “Копер”, model: ” Бензиновый копер
+MESSER jh-70 33-33-070”, price: “nan”, deposit: “2000” }, { name:
+“Лобзик”, model: ” Лобзик AEG STEP 100X 4935451000”, price: “7002452”,
+deposit: “700” }, { name: “Бензобур”, model: ” Спецкомплект ADA”, price:
+“nan”, deposit: “2000” }, { name: “Электропила”, model: “Электропила
+Huter ELS-2800 70/10/7”, price: “ote0181y0a07001240500492”, deposit:
+“1000” }, { name: “Компрессор 50 л”, model: “Ременной компрессор (50 л;
+8 бар; 450 л/мин) Inforce BCX-50L 04-06-30”, price:
+“2410-2006967-06911-3102”, deposit: “1000” }, { name: “Реноватор”,
+model: “Реноватор с набором насадок ЗУБР Профессионал 550 Вт, кейс
+МФИ-П550 КН”, price: “1259800435-0724”, deposit: “700” }, { name:
+“Виброплита 180 кг”, model: “Виброплита REDVERG RD-PC180R”, price:
+“nan”, deposit: “2500” }, { name: “шлифмашина по бетону 1”, model:
+“слипстоун GM_245/7.5”, price: “131021250369”, deposit: “3800” }, {
+name: “шлифмашина по бетону 2”, model: “слипстоун GM_245/7.5”, price:
+“161318640250”, deposit: “3800” }, { name: “шлифмашина по бетону 3”,
+model: “слипстоун GM_245/7.5”, price: “181434280284”, deposit: “3800” },
+{ name: “шлифмашина по бетону 4”, model: “слипстоун GM_245/7.5”, price:
+“181434280282”, deposit: “3800” }, { name: ” Отбойный молоток 1”, model:
+“deko drgh1800”, price: “ru062022”, deposit: “2000” }, { name: ”
+Отбойный молоток 2”, model: “deko drgh1800”, price: “ru062022”, deposit:
+“2000” }, { name: “сваекрут”, model: “REBIR AIE-1206-16/2000ER”, price:
+“24031878”, deposit: “2000” }, { name: “кусторез”, model: “WP280E WORX”,
+price: “2023 1100647563”, deposit: “1000” }, { name: ” Отбойный молоток
+1”, model: “Спец 3337 зпч1232”, price: “56902247”, deposit: “2000” }, {
+name: “Швонарезчик электрический”, model: “Слипстоун CS144E”, price:
+“181433760029”, deposit: “2500” }, { name: ” Аэратор для газона “,
+model:”ECO SCG400”, price: “L40024121205”, deposit: “2000” }, { name:
+“мотобур”, model: “GROUND DRILL-16 HERCULES”, price: “Т35000231100633”,
+deposit: “1800” }, { name: ” Электропушка “, model:”BALLU BHP-P-3”,
+price: “1002007121800105507220”, deposit: “350” }, { name: ” Упонор
+головки 16 20 25 32 “, model:”Uponor Q&E”, price: “nan”, deposit: “600”
+}, { name: ” Прессклещи электро 15/18/22/28 “, model:”Geberit Mapress”,
+price: “nan”, deposit: “1500” }, { name: ” Аэратор для газона “,
+model:”Вертикуттер бензиновый DAEWOO DSC 4000”, price: “dy0322ru”,
+deposit: “2000” }, { name: “заклепочник”, model: “тас 500а”, price:
+“nan”, deposit: “1000” }, { name: “таль 10 т 12м”, model: “nan”, price:
+“nan”, deposit: “1500” }, { name: “копер”, model: “тсс-95gpda”, price:
+“y2503100076”, deposit: “2000” }, { name: “циркулярная пила”, model:
+“aeg 66-2”, price: “02364000 1080711920”, deposit: “800” }, { name:
+“дрель макита”, model: “hp1620”, price: “711160r”, deposit: “600” }, {
+name: “моющий полесос”, model: “tor lc-20sc”, price: “cjl-tec20230064”,
+deposit: “1500” }, { name: “снегоуборщик”, model: “PATRIOT PS 602 E”,
+price: “2024/07/24005333/00599”, deposit: “2000” }, { name: “плиткорез
+ручной на 600”, model: “nan”, price: “nan”, deposit: “800” }, { name:
+“лазерный уровень”, model: “nan”, price: “nan”, deposit: “800” }, {
+name: “плиткорез ручной на 800”, model: “nan”, price: “600155”, deposit:
+“800” }, { name: “затирочная машина по бетону Верталет”, model: “nan”,
+price: “nan”, deposit: “2000” }, { name: “улитка1”, model: “ас 900”,
+price: “nan”, deposit: “800” }, { name: “улитка2”, model: “nan”, price:
+“87В39007886”, deposit: “800” }, { name: “лестница”, model: “nan”,
+price: “nan”, deposit: “1000” }, { name: “сеялка”, model: “nan”, price:
+“nan”, deposit: “500” }, { name: “Стенорез”, model: “Kenrus DC 425”,
+price: “4300 RPM”, deposit: “2000” }, { name: “Пескоструй”, model:
+“Булат и компрессор”, price: “120240001”, deposit: “2000” }, { name:
+“виброплита 152 кг”, model: “Champion PC1645 RH”, price:
+“1805240301283”, deposit: “2500” }, { name: “виброплита 215 кг”, model:
+“Masalta MS250-4”, price: “nan”, deposit: “2500” }, { name: “Дровокол”,
+model: “Champion LSH 5001”, price: “303240222607”, deposit: “1500” }, {
+name: “Дизельный калорифер (пушка)”, model: “PATRIOT DTС 303i непрямой
+нагрев”, price: “nan”, deposit: “2500” }, { name: “Дизельный калорифер
+(пушка)”, model: “PATRIOT DTС 303i непрямой нагрев”, price: “nan”,
+deposit: “2500” }, { name: “Подстанция трансформаторная КТПТО-80-У1”,
+model: “КТПТО-80-У1”, price: “nan”, deposit: “1800” }, { name:
+“Трансформатор для прогрева бетона ТСДЗ-80/0,38-У2”, model:
+“ТСДЗ-80/0,38-У2”, price: “nan”, deposit: “1500” }];

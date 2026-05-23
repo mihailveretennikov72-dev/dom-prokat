@@ -1,9 +1,23 @@
-import { WebSocket } from 'ws';
-globalThis.WebSocket = globalThis.WebSocket || WebSocket;
-import 'react-native-url-polyfill/auto';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://mmmsruuonlastzdbtvza.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tbXNydXVvbmxhc3R6ZGJ0dnphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxMDk5ODksImV4cCI6MjA5NDY4NTk4OX0.Xsn-a8_NCqm9ynvS5uSlQw9Qmxf-NFf422vDLH2D_Gc';
+// Магия: используем ws только если мы на сервере (во время сборки)
+let WebSocketPolyfill = globalThis.WebSocket;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+if (typeof process !== 'undefined' && typeof process.versions === 'object' && process.versions.node) {
+    // @ts-ignore
+    const ws = require('ws');
+    WebSocketPolyfill = ws.WebSocket;
+}
+
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Missing Supabase env variables');
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  realtime: {
+    transport: WebSocketPolyfill
+  }
+});

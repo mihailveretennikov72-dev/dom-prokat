@@ -1,12 +1,16 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Магия: используем ws только если мы на сервере (во время сборки)
+// Умная проверка: используем ws только на сервере (во время сборки)
 let WebSocketPolyfill = globalThis.WebSocket;
 
 if (typeof process !== 'undefined' && typeof process.versions === 'object' && process.versions.node) {
-    // @ts-ignore
-    const ws = require('ws');
-    WebSocketPolyfill = ws.WebSocket;
+    try {
+        // @ts-ignore
+        const ws = require('ws');
+        WebSocketPolyfill = ws.WebSocket;
+    } catch (e) {
+        // Игнорируем ошибку, если ws нет
+    }
 }
 
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;

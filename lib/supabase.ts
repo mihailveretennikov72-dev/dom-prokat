@@ -1,3 +1,5 @@
+import { WebSocket } from 'ws';
+globalThis.WebSocket = globalThis.WebSocket || WebSocket;
 import 'react-native-url-polyfill/auto';
 import { createClient } from '@supabase/supabase-js';
 

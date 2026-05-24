@@ -1,82 +1,55 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { Tool } from '../constants/tools';
 
-export type CartItem = {
-  id: string;
-  title: string;
-  subtitle: string;
-  pricePerDay: number;
-  deposit: number;
-  days: number;
-};
+export interface CartItem extends Tool {
+  rentalDays: number;
+}
 
-type CartContextType = {
-  items: CartItem[];
-  addToCart: (item: Omit<CartItem, "days">) => void;
-  removeFromCart: (id: string) => void;
-  increaseDays: (id: string) => void;
-  decreaseDays: (id: string) => void;
-};
+interface CartContextType {
+  cart: CartItem[];
+  addToCart: (tool: Tool, days?: number) => void;
+  removeFromCart: (toolId: string) => void;
+  updateDays: (toolId: string, days: number) => void;
+  clearCart: () => void;
+  totalPrice: number;
+  totalDeposit: number;
+}
 
-const CartContext = createContext<CartContextType>({
-  items: [],
-  addToCart: () => {},
-  removeFromCart: () => {},
-  increaseDays: () => {},
-  decreaseDays: () => {},
-});
+const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const CartProvider = ({ children }: { children: React.ReactNode }) => {
-  const [items, setItems] = useState<CartItem[]>([]);
+export const CartProvider = ({ children }: { children: ReactNode }) => {
+  const [cart, setCart] = useState<CartItem[]>([]);
 
-  const addToCart = (item: Omit<CartItem, "days">) => {
-    setItems((prev) => {
-      const existing = prev.find((i) => i.id === item.id);
-
-      if (existing) {
-        return prev.map((i) =>
-          i.id === item.id ? { ...i, days: i.days + 1 } : i
-        );
-      }
-
-      return [...prev, { ...item, days: 1 }];
+  const addToCart = (tool: Tool, days = 1) => {
+    setCart(prev => {
+      if (prev.some(item => item.id === tool.id)) return prev;
+      return [...prev, { ...tool, rentalDays: days }];
     });
   };
 
-  const removeFromCart = (id: string) => {
-    setItems((prev) => prev.filter((i) => i.id !== id));
+  const removeFromCart = (toolId: string) => {
+    setCart(prev => prev.filter(item => item.id !== toolId));
   };
 
-  const increaseDays = (id: string) => {
-    setItems((prev) =>
-      prev.map((i) =>
-        i.id === id ? { ...i, days: i.days + 1 } : i
-      )
-    );
+  const updateDays = (toolId: string, days: number) => {
+    if (days < 1) return;
+    setCart(prev => prev.map(item => item.id === toolId ? { ...item, rentalDays: days } : item));
   };
 
-  const decreaseDays = (id: string) => {
-    setItems((prev) =>
-      prev.map((i) =>
-        i.id === id && i.days > 1
-          ? { ...i, days: i.days - 1 }
-          : i
-      )
-    );
-  };
+  const clearCart = () => setCart([]);
+
+  const totalPrice = cart.reduce((sum, item) => sum + (item.pricePerDay * item.rentalDays), 0);
+  const totalDeposit = cart.reduce((sum, item) => sum + item.deposit, 0);
 
   return (
-    <CartContext.Provider
-      value={{
-        items,
-        addToCart,
-        removeFromCart,
-        increaseDays,
-        decreaseDays,
-      }}
-    >
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateDays, clearCart, totalPrice, totalDeposit }}>
       {children}
     </CartContext.Provider>
   );
 };
 
-export const useCart = () => useContext(CartContext);
+export const useCart = () => {
+  const ctx = useContext(CartContext);
+  if (!ctx) throw new Error('useCart must be used within CartProvider');
+  return ctx;
+};

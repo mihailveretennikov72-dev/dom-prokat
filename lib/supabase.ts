@@ -1,15 +1,24 @@
-// Заглушка для статического сайта
-export const supabase = {
-  from: () => ({
-    select: () => Promise.resolve({ data: [], error: null }),
-    insert: () => Promise.resolve({ data: null, error: null }),
-    update: () => Promise.resolve({ data: null, error: null }),
-    delete: () => Promise.resolve({ data: null, error: null }),
-  }),
-  auth: {
-    signIn: () => Promise.resolve({ data: null, error: null }),
-    signUp: () => Promise.resolve({ data: null, error: null }),
-    signOut: () => Promise.resolve({ error: null }),
-    getUser: () => Promise.resolve({ data: { user: null }, error: null }),
-  },
-};
+import { createClient } from '@supabase/supabase-js';
+
+// Polyfill для WebSocket (работает и на сервере, и в браузере)
+let WebSocketPolyfill: any = globalThis.WebSocket;
+
+// Проверяем, запущен ли код на сервере (Node.js)
+if (typeof process !== 'undefined' && process.versions && process.versions.node) {
+  try {
+    // @ts-ignore
+    const ws = require('ws');
+    WebSocketPolyfill = ws.WebSocket;
+  } catch (e) {
+    console.warn('ws package not found, using default WebSocket');
+  }
+}
+
+const supabaseUrl = 'https://mmmsruuonlastzdbtvza.supabase.co';
+const supabaseAnonKey = 'sb_publishable_5C5Ql7I7GIV7kxokOgDT0w_wTdU_vMv';
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  realtime: {
+    transport: WebSocketPolyfill
+  }
+});

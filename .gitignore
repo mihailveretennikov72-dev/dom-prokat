@@ -1,12 +1,15 @@
-# Expo / Build
 dist/
 .expo/
 node_modules/
-*.jks *.p8 *.p12 *.key *.mobileprovision
-
-# Env & OS
-.env.local .env.*.local
-.DS_Store Thumbs.db
-
-# IDE
-.vscode/ .idea/ *.swp *.swo
+*.html
+metadata.json
+_redirects
+_sitemap.html
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
